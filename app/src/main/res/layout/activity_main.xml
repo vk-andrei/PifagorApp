@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin"
+        android:text="@string/calculate_c_hypotenuse"
+        android:textColor="@color/black"
+        android:textStyle="italic"
+        android:textSize="@dimen/default_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_pifagor"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="@dimen/default_margin"
+        android:src="@drawable/pifagor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin"
+        android:text="@string/result"
+        android:textColor="@color/teal_700"
+        android:textStyle="bold|italic"
+        android:textSize="@dimen/default_text"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_pifagor" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/et_a_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginTop="@dimen/default_margin"
+        android:layout_marginEnd="@dimen/default_margin"
+        app:layout_constraintTop_toBottomOf="@+id/tv_result">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_a"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/input_a"
+            android:inputType="number"
+            android:textColor="@color/black"
+            android:textSize="@dimen/default_text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/et_b_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/default_margin"
+        android:layout_marginTop="@dimen/default_margin"
+        android:layout_marginEnd="@dimen/default_margin"
+        app:layout_constraintTop_toBottomOf="@+id/et_a_layout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_b"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/input_b"
+            android:inputType="number"
+            android:textColor="@color/black"
+            android:textSize="@dimen/default_text"
+            app:layout_constraintEnd_toEndOf="@+id/et_a_layout"
+            app:layout_constraintStart_toStartOf="@+id/et_a_layout"
+            app:layout_constraintTop_toBottomOf="@+id/et_a_layout" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_calc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_margin"
+        android:text="@string/calculate"
+        android:textSize="@dimen/default_text"
+        app:layout_constraintEnd_toEndOf="@+id/et_a_layout"
+        app:layout_constraintStart_toStartOf="@+id/et_a_layout"
+        app:layout_constraintTop_toBottomOf="@+id/et_b_layout" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

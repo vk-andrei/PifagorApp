@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PifagorApp</string>
+    <string name="result">Result: c = </string>
+    <string name="input_a">Input: a</string>
+    <string name="input_b">Input: b</string>
+    <string name="calculate">Calculate!</string>
+    <string name="calculate_c_hypotenuse">Calculate C (Hypotenuse)</string>
+</resources>
